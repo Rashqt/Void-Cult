@@ -1486,15 +1486,6 @@
     </style>
   </head>
   <body>
-    <div class="loader" id="loader" aria-live="polite">
-      <div class="loader-logo">VOID CULT</div>
-      <div class="loader-line-wrap">
-        <div class="loader-line" id="loaderLine"></div>
-      </div>
-      <div class="loader-meta" id="loaderMeta">LOADING THE DROP...</div>
-      <div class="loader-percent" id="loaderPercent">0%</div>
-    </div>
-
     <div class="topbar">
       <div class="topbar-inner">
         <div class="marquee-track">
@@ -2151,29 +2142,6 @@
 
     <script>
       gsap.registerPlugin(ScrollTrigger);
-
-      const loader = document.getElementById('loader');
-      const loaderLine = document.getElementById('loaderLine');
-      const loaderPercent = document.getElementById('loaderPercent');
-      const loaderMeta = document.getElementById('loaderMeta');
-      let progress = 0;
-
-      const loaderInterval = setInterval(() => {
-        progress += 8;
-        loaderLine.style.width = progress + '%';
-        loaderPercent.textContent = progress + '%';
-        if (progress >= 100) {
-          clearInterval(loaderInterval);
-          loaderMeta.textContent = 'DROP LOADED';
-          gsap.to(loader, {
-            duration: 0.9,
-            yPercent: -110,
-            ease: 'power3.inOut',
-            delay: 0.25,
-            onComplete: () => loader.remove()
-          });
-        }
-      }, 120);
 
       const header = document.getElementById('siteHeader');
       const updateHeaderState = () => {
