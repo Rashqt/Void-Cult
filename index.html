@@ -1154,7 +1154,7 @@
         justify-content: space-between;
         gap: 20px;
         margin-bottom: 16px;
-#
+
       }
 
       .drawer-actions {
@@ -1263,6 +1263,224 @@
         .footer-bottom {
           flex-direction: column;
           align-items: flex-start;
+        }
+
+        .header-inner {
+          min-height: 64px;
+        }
+
+        .brand {
+          font-size: 1rem;
+          letter-spacing: 0.12em;
+        }
+
+        .nav-actions {
+          gap: 2px;
+        }
+
+        .icon-btn {
+          width: 34px;
+          height: 34px;
+        }
+
+        .visual-stage {
+          min-height: 0;
+          margin: 0 -12px;
+        }
+
+        .hero-figure {
+          width: 100%;
+          height: min(112vw, 560px);
+        }
+
+        .floating-tag {
+          padding: 10px 12px;
+          font-size: 9px;
+        }
+
+        .floating-tag.tag-left {
+          left: 8px;
+          bottom: 28px;
+        }
+
+        .floating-tag.tag-right {
+          right: 8px;
+          top: 24px;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 10px;
+        }
+
+        .hero-actions .btn {
+          width: 100%;
+        }
+
+        .stat-row {
+          justify-content: space-between;
+          gap: 12px;
+          margin-top: 24px;
+        }
+
+        .stat strong {
+          font-size: 1.5rem;
+        }
+
+        .category-section, .drop-section, .story-section, .lookbook-section, .newsletter {
+          padding: 68px 0;
+        }
+
+        .category-card {
+          height: min(112vw, 420px);
+        }
+
+        .lookbook-section {
+          overflow: hidden;
+        }
+
+        .lookbook-track {
+          grid-template-columns: none;
+          gap: 12px;
+          overflow-x: auto;
+          width: calc(100vw - 12px);
+          padding-bottom: 8px;
+          scroll-snap-type: x mandatory;
+          scrollbar-width: none;
+        }
+
+        .lookbook-track::-webkit-scrollbar {
+          display: none;
+        }
+
+        .lookbook-item {
+          width: min(78vw, 340px);
+          height: min(125vw, 500px);
+          flex: 0 0 auto;
+          scroll-snap-align: start;
+        }
+
+        .story-copy {
+          padding: 30px 22px 24px;
+        }
+
+        .newsletter-box {
+          padding: 24px 18px;
+        }
+
+        .search-inner {
+          width: calc(100% - 32px);
+          padding-top: 72px;
+        }
+
+        .search-results {
+          max-height: calc(100vh - 230px);
+          overflow-y: auto;
+        }
+
+        .search-result img {
+          height: 180px;
+        }
+
+        .toast {
+          right: 12px;
+          bottom: 12px;
+          left: 12px;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          width: calc(100% - 20px);
+        }
+
+        .marquee-track {
+          gap: 24px;
+          font-size: 9px;
+        }
+
+        .nav-actions .icon-btn:nth-child(2),
+        .nav-actions .icon-btn:nth-child(3) {
+          display: none;
+        }
+
+        .hero-title {
+          font-size: clamp(2.8rem, 17vw, 5rem);
+        }
+
+        .hero-sub {
+          font-size: 0.96rem;
+        }
+
+        .product-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 10px;
+        }
+
+        .product-info {
+          padding: 12px 10px 14px;
+        }
+
+        .product-name {
+          font-size: 0.82rem;
+        }
+
+        .product-category,
+        .old-price,
+        .discount {
+          font-size: 9px;
+        }
+
+        .wishlist-btn,
+        .badge {
+          top: 8px;
+        }
+
+        .wishlist-btn {
+          right: 8px;
+          width: 32px;
+          height: 32px;
+        }
+
+        .badge {
+          left: 8px;
+          padding: 6px 7px;
+        }
+
+        .quick-add {
+          min-height: 38px;
+          font-size: 9px;
+        }
+
+        .mini-item {
+          grid-template-columns: 70px 1fr;
+        }
+
+        .mini-item img {
+          width: 70px;
+          height: 92px;
+        }
+
+        .mini-item > :last-child {
+          grid-column: 2;
+        }
+
+        .drawer-actions {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (hover: none) and (pointer: coarse) {
+        .category-card:hover img,
+        .product-card:hover .product-media img {
+          transform: none;
+        }
+
+        .product-card:hover .first,
+        .product-card:hover .second {
+          opacity: 1;
         }
       }
     </style>
